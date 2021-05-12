@@ -1,0 +1,190 @@
+$font-titulos: 'Ubuntu', sans-serif;
+$font-base: 'Raleway', sans-serif;
+$texto-chico: 14px;
+$texto-base: 16px;
+$texto_mediano: 22px;
+$texto-titulos: 30px;
+$coral : #F2295F;
+$blanco: aliceblue;
+$turquesa: #04D9D9;
+$gris: grey;
+$fondo: black; 
+
+
+@mixin texto ($font-family, $font-size, $text-align, $color){
+    font-family: $font-family;
+    font-size: $font-size;
+    text-align: $text-align;
+    color: $color;
+}
+
+body {
+    background-color: $fondo;
+    @include texto($font-base, $texto-base, left, $blanco);
+    @if $fondo == white {
+        color: black;
+    }
+
+    header {
+        h1 {
+            @include texto ($font-titulos, $texto-titulos, left, $blanco);
+            @if $fondo == white {
+                color: grey;
+            }
+        } 
+    }
+    
+    h2 {
+        @include texto ($font-titulos, $texto-titulos, center, $coral)
+
+    }
+    .sectionForm{
+        background-color: $turquesa;
+        width: 60%;
+        align-self: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            padding: 5px;
+            @include texto($font-base, $texto-base, left, black );
+            font-weight: bolder;
+
+            input {
+                background-color: inherit;
+                border-bottom: 1.5px solid black;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                margin: 1%;
+                font-weight: bolder;
+
+            }
+            select {
+                background-color: white; 
+            }
+            
+        }
+        
+    }
+    
+}
+
+.inicio__parrafo {
+    padding: 5%;
+    @include texto($font-base, $texto-mediano, center,  rgb(140, 221, 221) )
+}
+
+.inicio__titulo {
+   color: $gris;
+}
+
+footer {
+    @include texto($font-base, $texto-base, left, grey );
+    padding:2%;
+    
+}
+.footer__redes {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: $texto-chico;
+    li {
+        margin: 1%;
+        :hover {
+            color: $turquesa;
+        }
+        a {
+            color: wheat;
+            text-decoration: none;
+           
+        }
+    }
+}
+
+
+.servicios {
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: repeat(2, 2fr);
+    grid-row-gap: 30px;
+    grid-template-areas: "contenido__foto contenido__foto contenido__texto"
+                         "guion__texto guion__foto guion__foto"
+                         "disenio__foto disenio__foto disenio__texto"
+}
+
+.contenido__foto {
+    grid-area: contenido__foto;
+    width: inherit;
+
+}
+.contenido__texto {
+    grid-area: contenido__texto;
+    padding: 2%;
+    h3 {
+        @include texto ($font-titulos, $texto-mediano, left, $turquesa)
+    }
+}
+
+.guion__foto {
+    @extend .contenido__foto;
+    grid-area: guion__foto;
+   
+}
+.guion__texto {
+    grid-area: guion__texto;
+    padding:2%;
+    h3 {
+        @include texto ($font-titulos, $texto-mediano, left, $turquesa);
+    }
+}
+.disenio__foto {
+    @extend .contenido__foto;
+    grid-area: disenio__foto;
+}
+.disenio__texto {
+    grid-area: disenio__texto;
+    padding: 2%;
+    h3 {
+        @include texto ($font-titulos, $texto-mediano, left, $turquesa);
+    }
+}
+.sobreMi {
+    padding:5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.sobreMi__foto {
+    width: 25%;
+    height: 25%;
+    padding: 2%;
+    display: inline;
+}
+.sobreMi__parrafo {
+    padding:3%;
+    display: inline;
+    @include texto($font-base, $texto-base, justify, inherit );
+    width: 100%;
+    height: 100%;
+    float: right;
+}
+@media only screen and (max-width: 600px) {
+    .servicios {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly ;
+        align-items: center;
+    }    
+}

@@ -1,0 +1,155 @@
+body {
+  background-color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  color: aliceblue; }
+  body header h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    text-align: left;
+    color: aliceblue; }
+  body h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #F2295F; }
+  body .sectionForm {
+    background-color: #04D9D9;
+    width: 60%;
+    align-self: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px; }
+    body .sectionForm form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding: 5px;
+      font-family: "Raleway", sans-serif;
+      font-size: 16px;
+      text-align: left;
+      color: black;
+      font-weight: bolder; }
+      body .sectionForm form input {
+        background-color: inherit;
+        border-bottom: 1.5px solid black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin: 1%;
+        font-weight: bolder; }
+      body .sectionForm form select {
+        background-color: white; }
+
+.inicio__parrafo {
+  padding: 5%;
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  color: #8cdddd; }
+
+.inicio__titulo {
+  color: grey; }
+
+footer {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  color: grey;
+  padding: 2%; }
+
+.footer__redes {
+  list-style: none;
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px; }
+  .footer__redes li {
+    margin: 1%; }
+    .footer__redes li :hover {
+      color: #04D9D9; }
+    .footer__redes li a {
+      color: wheat;
+      text-decoration: none; }
+
+.servicios {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-rows: repeat(2, 2fr);
+  grid-row-gap: 30px;
+  grid-template-areas: "contenido__foto contenido__foto contenido__texto" "guion__texto guion__foto guion__foto" "disenio__foto disenio__foto disenio__texto"; }
+
+.contenido__foto, .guion__foto, .disenio__foto {
+  grid-area: contenido__foto;
+  width: inherit; }
+
+.contenido__texto {
+  grid-area: contenido__texto;
+  padding: 2%; }
+  .contenido__texto h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    text-align: left;
+    color: #04D9D9; }
+
+.guion__foto {
+  grid-area: guion__foto; }
+
+.guion__texto {
+  grid-area: guion__texto;
+  padding: 2%; }
+  .guion__texto h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    text-align: left;
+    color: #04D9D9; }
+
+.disenio__foto {
+  grid-area: disenio__foto; }
+
+.disenio__texto {
+  grid-area: disenio__texto;
+  padding: 2%; }
+  .disenio__texto h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    text-align: left;
+    color: #04D9D9; }
+
+.sobreMi {
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.sobreMi__foto {
+  width: 25%;
+  height: 25%;
+  padding: 2%;
+  display: inline; }
+
+.sobreMi__parrafo {
+  padding: 3%;
+  display: inline;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  float: right; }
+
+@media only screen and (max-width: 600px) {
+  .servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; } }
