@@ -1,21 +1,30 @@
 body {
   background-color: black;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-align: left;
-  color: aliceblue; }
-  body header h1 {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 30px;
-    text-align: left;
-    color: aliceblue; }
+  color: white; }
+  body header {
+    background-image: url(../../MEDIA/imagenHeader.jpg);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    body header h1 {
+      height: 70%;
+      letter-spacing: 2px;
+      font-family: "Bebas Neue", cursive;
+      font-size: 35px;
+      text-align: left;
+      color: white; }
   body h2 {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 30px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 35px;
     text-align: center;
-    color: #F2295F; }
+    color: white;
+    margin: 3%;
+    letter-spacing: 2px; }
   body .sectionForm {
-    background-color: #04D9D9;
+    background-color: #313131;
     width: 60%;
     align-self: center;
     margin-top: 5%;
@@ -29,25 +38,29 @@ body {
       align-items: flex-start;
       justify-content: space-evenly;
       padding: 5px;
-      font-family: "Raleway", sans-serif;
+      font-family: "Roboto", sans-serif;
       font-size: 16px;
       text-align: left;
-      color: black;
+      color: #3288eb;
       font-weight: bolder; }
       body .sectionForm form input {
         background-color: inherit;
-        border-bottom: 1.5px solid black;
+        border-bottom: 1.5px solid white;
         border-top: none;
         border-left: none;
         border-right: none;
         margin: 1%;
-        font-weight: bolder; }
+        font-weight: bolder;
+        color: lightgray; }
       body .sectionForm form select {
-        background-color: white; }
+        background-color: white;
+        width: 50%; }
+      body .sectionForm form textarea {
+        width: 50%; }
 
 .inicio__parrafo {
   padding: 5%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 22px;
   text-align: center;
   color: #8cdddd; }
@@ -56,7 +69,7 @@ body {
   color: grey; }
 
 footer {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-align: left;
   color: grey;
@@ -74,7 +87,7 @@ footer {
   .footer__redes li {
     margin: 1%; }
     .footer__redes li :hover {
-      color: #04D9D9; }
+      color: #3288eb; }
     .footer__redes li a {
       color: wheat;
       text-decoration: none; }
@@ -94,10 +107,11 @@ footer {
   grid-area: contenido__texto;
   padding: 2%; }
   .contenido__texto h3 {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Bebas Neue", cursive;
     font-size: 22px;
     text-align: left;
-    color: #04D9D9; }
+    color: #3288eb;
+    letter-spacing: 2px; }
 
 .guion__foto {
   grid-area: guion__foto; }
@@ -106,10 +120,11 @@ footer {
   grid-area: guion__texto;
   padding: 2%; }
   .guion__texto h3 {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Bebas Neue", cursive;
     font-size: 22px;
     text-align: left;
-    color: #04D9D9; }
+    color: #3288eb;
+    letter-spacing: 2px; }
 
 .disenio__foto {
   grid-area: disenio__foto; }
@@ -118,10 +133,11 @@ footer {
   grid-area: disenio__texto;
   padding: 2%; }
   .disenio__texto h3 {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Bebas Neue", cursive;
     font-size: 22px;
     text-align: left;
-    color: #04D9D9; }
+    color: #3288eb;
+    letter-spacing: 2px; }
 
 .sobreMi {
   padding: 5%;
@@ -139,7 +155,7 @@ footer {
 .sobreMi__parrafo {
   padding: 3%;
   display: inline;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-align: justify;
   color: inherit;
@@ -153,3 +169,27 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; } }
+
+.portfolio__desarrolloContenidos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline; }
+
+.raze {
+  padding: 2%;
+  width: 200px;
+  align-self: center; }
+
+.space {
+  padding: 3%;
+  width: 280px;
+  margin: 1%; }
+
+.subtitulos {
+  font-family: "Bebas Neue", cursive;
+  font-size: 22px;
+  text-align: left;
+  color: #3288eb;
+  letter-spacing: 2px; }
